@@ -23,6 +23,9 @@ db.on('error', function(err){
     console.log(err);
 });
 
+// Port Number
+const port = process.env.PORT || 8080;
+
 // Bring in Models
 let Article = require('./models/article');
 
@@ -106,6 +109,6 @@ let users = require('./routes/users');
 app.use('/articles', articles);
 app.use('/users', users);
 
-app.listen(3000, function() {
+app.listen(port, function() {
     console.log('Server started on port 3000...');
 })
