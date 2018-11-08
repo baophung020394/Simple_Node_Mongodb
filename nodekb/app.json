@@ -1,0 +1,8 @@
+{
+    "name": "Node.js Getting Started",
+    "description": "Node.js & Express From Scratch",
+    "repository": "https://github.com/baophung020394/Simple_Node_Mongodb",
+    "logo": "http://node-js-sample.herokuapp.com/node.svg",
+    "keywords": ["node","express","static"],
+    "image": "heroku/nodejs"
+}

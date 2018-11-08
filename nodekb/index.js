@@ -8,7 +8,6 @@ const session = require('express-session');
 const passport = require('passport');
 const config = require('./config/database');
 
-
 // Connect DB
 mongoose.connect(config.database);
 let db = mongoose.connection;
@@ -23,8 +22,8 @@ db.on('error', function(err){
     console.log(err);
 });
 
-// Port Number
-const port = process.env.PORT || 8080;
+
+// const port = process.env.PORT || 8080;
 
 // Bring in Models
 let Article = require('./models/article');
@@ -32,6 +31,8 @@ let Article = require('./models/article');
 // Init app
 const app = express();
 
+// Port Number
+app.set('port', (process.env.PORT || 5000));
 // Load View Engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -109,6 +110,6 @@ let users = require('./routes/users');
 app.use('/articles', articles);
 app.use('/users', users);
 
-app.listen(port, function() {
-    console.log('Server started on port 3000...');
+app.listen(app.get('port'), function() {
+    console.log('Server started on port', app.get('port'));
 })

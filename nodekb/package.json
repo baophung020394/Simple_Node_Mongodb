@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Simple knowledgebase app",
   "main": "app.js",
-  "homepage": "https://baophung020394.github.io/Simple_Node_Mongodb/",
   "scripts": {
     "start": "node app",
     "deploy": "gh-pages -d views"
@@ -23,5 +22,14 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "pug": "^2.0.3"
-  }
+  },
+  "repository" : {
+    "type":"git",
+    "url": "https://github.com/baophung020394/Simple_Node_Mongodb"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ]
 }
